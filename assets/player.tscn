@@ -1,5 +1,52 @@
-[gd_scene format=3 uid="uid://b6q42mr6p148"]
+[gd_scene load_steps=8 format=3 uid="uid://b6q42mr6p148"]
+
+[ext_resource type="Texture2D" uid="uid://bq48fbbx022ji" path="res://assets/characters/idle_down.png" id="1_d4fya"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1i5f3"]
+atlas = ExtResource("1_d4fya")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ljxh"]
+atlas = ExtResource("1_d4fya")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyua0"]
+atlas = ExtResource("1_d4fya")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1efn"]
+atlas = ExtResource("1_d4fya")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5yps"]
+atlas = ExtResource("1_d4fya")
+region = Rect2(128, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vhowt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1i5f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ljxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyua0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1efn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5yps")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vhowt")
+frame_progress = 0.0635064
