@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="RPG Project"
-run/main_scene="res://scenes/Game.tscn"
+config/name="Godot Projekt"
+run/main_scene="res://scenes/player.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
