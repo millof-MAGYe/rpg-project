@@ -175,10 +175,12 @@ height = 20.0
 [node name="Player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(60, -42)
+position = Vector2(59, -40)
 sprite_frames = SubResource("SpriteFrames_4n8m8")
 animation = &"idle_down"
+frame_progress = 0.164144
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(60, -39)
+position = Vector2(60, -40)
+scale = Vector2(1, 1.36)
 shape = SubResource("CapsuleShape2D_q26uy")
