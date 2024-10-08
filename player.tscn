@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0ywdeq0vfu0f"]
+
+[ext_resource type="Texture2D" uid="uid://bq48fbbx022ji" path="res://assets/characters/idle_down.png" id="1_mjime"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q1jyr"]
+radius = 7.0
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15)
+shape = SubResource("CapsuleShape2D_q1jyr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="IdleDown" type="Sprite2D" parent="."]
+position = Vector2(6, -15)
+texture = ExtResource("1_mjime")
+hframes = 5

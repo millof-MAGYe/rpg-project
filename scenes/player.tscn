@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cqkmdujqx4sic"]
+[gd_scene load_steps=28 format=3 uid="uid://cqkmdujqx4sic"]
 
 [ext_resource type="Script" path="res://scripts/movement.gd" id="1_ayfvf"]
 [ext_resource type="Texture2D" uid="uid://bq48fbbx022ji" path="res://assets/characters/idle_down.png" id="1_ddr2c"]
@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://fy2m3tpoy875" path="res://assets/characters/idle_up.png" id="4_hw6dx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q26uy"]
-radius = 5.0
-height = 20.0
+radius = 7.0
+height = 22.0588
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gk1ti"]
 atlas = ExtResource("1_ddr2c")
@@ -173,38 +173,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_js6fv"]
-resource_name = "idle_down"
-
-[sub_resource type="Animation" id="Animation_d45kw"]
-resource_name = "idle_left"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_l2253"]
-_data = {
-"idle_down": SubResource("Animation_js6fv"),
-"idle_left": SubResource("Animation_d45kw")
-}
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_t7fdt"]
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ayfvf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -1)
 scale = Vector2(1, 1.36)
 shape = SubResource("CapsuleShape2D_q26uy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_4n8m8")
 animation = &"idle_down"
 frame_progress = 0.504834
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_l2253")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_t7fdt")
