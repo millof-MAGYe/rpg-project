@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 100
+const speed = 80
 var current_dir= "none"
 
 
@@ -47,28 +47,28 @@ func play_anim(movement):
 	var anim = $AnimatedSprite2D
 		
 	if dir == "right":
-		anim.flip_h = false
-		if movement == 1:
-			anim.play("idle_right")
-		elif movement == 0:
-			anim.play("idle_right")
-	if dir == "left":
 		anim.flip_h = true
 		if movement == 1:
-			anim.play("idle_right")
+			anim.play("walk_left")
 		elif movement == 0:
-			anim.play("idle_right")
+			anim.play("idle_left")
+	if dir == "left":
+		anim.flip_h = false
+		if movement == 1:
+			anim.play("walk_left")
+		elif movement == 0:
+			anim.play("idle_left")
 				
 	if dir == "down":
 		anim.flip_h = true
 		if movement == 1:
-			anim.play("idle_down")
+			anim.play("walk_down")
 		elif movement == 0:
 			anim.play("idle_down")
 	if dir == "up":
 		anim.flip_h = true
 		if movement == 1:
-			anim.play("idle_up")
+			anim.play("walk_up")
 		elif movement == 0:
 			anim.play("idle_up")
 						
