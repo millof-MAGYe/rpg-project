@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbvdjrr3xrtcm"
-path="res://.godot/imported/survivalgame-terrian-defult.png-e05d5e8d77c0cbacb0d22ebfaf77da1b.ctex"
+uid="uid://5smli48cvfmp"
+path="res://.godot/imported/terrain.png-35062d61a1793616aa335cf0aaa92ec4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/survivalgame-terrian-defult.png"
-dest_files=["res://.godot/imported/survivalgame-terrian-defult.png-e05d5e8d77c0cbacb0d22ebfaf77da1b.ctex"]
+source_file="res://assets/world_assets/PixelWoods/Seasons/winter/terrain.png"
+dest_files=["res://.godot/imported/terrain.png-35062d61a1793616aa335cf0aaa92ec4.ctex"]
 
 [params]
 
